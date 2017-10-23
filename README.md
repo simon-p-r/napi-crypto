@@ -1,5 +1,7 @@
 # napi-crypto
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/simon-p-r/napi-crypto.svg)](https://greenkeeper.io/)
+
 This was developed against openssl library of nodejs using n-api
 
 # Install
