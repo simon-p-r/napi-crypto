@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.8)
 
-project(crypto-node C)
+project(napi-crypto C)
 
 FILE(GLOB CRYPTO_SOURCE
    src/*.c
