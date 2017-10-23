@@ -1,18 +1,29 @@
+init:
+  - git config --global core.autocrlf true
+
 environment:
   matrix:
     - nodejs_version: "6"
     - nodejs_version: "8"
 
-os: Visual Studio 2015
-platform: x64
+os: 
+  Visual Studio 2015
+platform: 
+  x64
+  x86
 
 cache:
   - node_modules
 
-
 install:
   - ps: Install-Product node $env:nodejs_version
+  - set CI=true
+  - npm -g install npm@latest
+  - set PATH=%APPDATA%\npm;%PATH%
   - npm install
+
+matrix:
+  fast_finish: true
 
 test_script:
   - node --version
