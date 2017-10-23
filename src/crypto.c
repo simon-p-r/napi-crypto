@@ -28,6 +28,7 @@ napi_value CreateKeyPair(napi_env env, napi_callback_info info) {
     if (ret != 1) {
         BN_free(bn);
         napi_throw_error(env, NULL, "Failed to generate big num");
+        return NULL;
     }
     
     rsa = RSA_new();
@@ -36,6 +37,7 @@ napi_value CreateKeyPair(napi_env env, napi_callback_info info) {
         BN_free(bn);
         RSA_free(rsa);
         napi_throw_error(env, NULL, "Failed to generate key");
+        return NULL;
     }
 
     BN_free(bn);
@@ -48,6 +50,7 @@ napi_value CreateKeyPair(napi_env env, napi_callback_info info) {
         RSA_free(rsa);
         BIO_vfree(bio);
         napi_throw_error(env, NULL, "Failed to write private key");
+        return NULL;
     }
 
     rawLength = BIO_get_mem_data(bio, &raw);
@@ -66,6 +69,7 @@ napi_value CreateKeyPair(napi_env env, napi_callback_info info) {
 
     if (bio == NULL) {
         napi_throw_error(env, NULL, "Failed to create bio");
+        return NULL;
     }
 
     /* Dump public key */
@@ -73,6 +77,7 @@ napi_value CreateKeyPair(napi_env env, napi_callback_info info) {
         BIO_vfree(bio);
         RSA_free(rsa);
         napi_throw_error(env, NULL, "Failed to write public key");
+        return NULL;
     }
 
     rawLength = BIO_get_mem_data(bio, &raw);
@@ -272,8 +277,8 @@ napi_value GetFingerprint(napi_env env, napi_callback_info info) {
     certbio = BIO_new_mem_buf(cert_data, (int)cert_len);
 
     if (!(cert = PEM_read_bio_X509(certbio, NULL, 0, NULL))) {
-        napi_throw_error(env, NULL, "Error loading cert into memory");
         BIO_free(certbio);
+        napi_throw_error(env, NULL, "Error loading cert into memory");
         return NULL;
     }
 
