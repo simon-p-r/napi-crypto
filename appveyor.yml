@@ -18,8 +18,10 @@ cache:
 
 install:
   - ps: Install-Product node $env:nodejs_version $env:platform
-  - ps: npm install
-
+  - npm -g install npm@latest
+  - set PATH=%APPDATA%\npm;%PATH%
+  - npm install
+  
 matrix:
   fast_finish: true
 
