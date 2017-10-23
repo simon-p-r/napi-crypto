@@ -1,5 +1,10 @@
 # napi-crypto
 
+[![Windows Build Status](https://img.shields.io/appveyor/ci/simon-p-r/napi-crypto/master.svg?label=windows&style=flat-square&maxAge=2592000)](https://ci.appveyor.com/project/simon-p-r/napi-crypto)
+[![Current Version](https://img.shields.io/npm/v/napi-crypto.svg?maxAge=1000)](https://www.npmjs.org/package/napi-crypto)
+[![dependency Status](https://img.shields.io/david/simon-p-r/napi-crypto.svg?maxAge=1000)](https://david-dm.org/simon-p-r/napi-crypto)
+[![devDependency Status](https://img.shields.io/david/dev/simon-p-r/napi-crypto.svg?maxAge=1000)](https://david-dm.org/simon-p-r/napi-crypto)
+
 This was developed against openssl library of nodejs using n-api, currently only works on Windows
 
 # Install
