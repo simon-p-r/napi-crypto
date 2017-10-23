@@ -16,7 +16,8 @@
   "author": "simon-p-r",
   "license": "BSD-3-Clause",
   "dependencies": {
-    "bindings": "^1.3.0"
+    "bindings": "^1.3.0",
+    "cmake-js": "^3.5.0"
   },
   "devDependencies": {
     "code": "^5.1.0",
