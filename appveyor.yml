@@ -6,7 +6,6 @@ os:
 
 environment:
   matrix:
-    # - nodejs_version: "6"
     - nodejs_version: "8"
 
 platform: 
@@ -31,4 +30,5 @@ test_script:
   - cmake --version
   - npm test
 
-build: off
+build: 
+  off

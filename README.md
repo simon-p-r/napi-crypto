@@ -1,6 +1,6 @@
 # napi-crypto
 
-This was developed against openssl library of nodejs using n-api
+This was developed against openssl library of nodejs using n-api, currently only works on Windows
 
 # Install
 
