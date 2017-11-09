@@ -4,7 +4,7 @@
   "description": "napi bindings for openssl crypto tools ",
   "main": "lib/index.js",
   "scripts": {
-    "install": "cmake-js build",
+    "install": "cmake-js compile",
     "rebuild": "cmake-js rebuild",
     "test": "lab -a code -v -t 100 -L -m 5000"
   },
@@ -20,7 +20,7 @@
     "cmake-js": "^3.5.0"
   },
   "devDependencies": {
-    "code": "^5.1.0",
+    "code": "^5.1.2",
     "lab": "^14.3.1",
     "node-addon-api": "^1.0.0"
   }
