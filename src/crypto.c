@@ -230,7 +230,7 @@ napi_value GetFingerprint(napi_env env, napi_callback_info info) {
     X509 *cert = NULL;
     const EVP_MD *digest;
     unsigned char md[EVP_MAX_MD_SIZE];
-    int i;
+    unsigned int i;
     int pos = 0;
 
     size_t argc = 2;
@@ -251,7 +251,7 @@ napi_value GetFingerprint(napi_env env, napi_callback_info info) {
         NAPI_CALL(env, napi_create_string_utf8(env, (char *)"sha1", -1, &digest_arg));
     } 
 
-    NAPI_CALL(env, napi_get_value_uint32(env, digest_arg, (char *)digest_type, digestSize, &digestResult));
+    NAPI_CALL(env, napi_get_value_string_utf8(env, digest_arg, (char *)digest_type, digestSize, &digestResult));
 
     if (strcmp("md5", digest_type) == 0) {
         digest = EVP_md5();

@@ -6,6 +6,7 @@
   "scripts": {
     "install": "cmake-js compile",
     "rebuild": "cmake-js rebuild",
+    "clean": "cmake-js clean",
     "test": "lab -a code -v -t 100 -L -m 5000"
   },
   "keywords": [
