@@ -10,8 +10,6 @@ FILE(GLOB CRYPTO_SOURCE
 add_definitions(-DNAPI_DISABLE_CPP_EXCEPTIONS)
 
 
-message(${CMAKE_JS_LIB})
-
 add_library(${PROJECT_NAME} SHARED ${CRYPTO_SOURCE})
 set_target_properties(${PROJECT_NAME} PROPERTIES PREFIX "" SUFFIX ".node")
 
