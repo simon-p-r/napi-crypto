@@ -1,5 +1,7 @@
 # napi-crypto
 
+[![Build Status](https://travis-ci.org/simon-p-r/napi-crypto.svg?branch=master)](https://travis-ci.org/simon-p-r/napi-crypto)
+
 [![Windows Build Status](https://img.shields.io/appveyor/ci/simon-p-r/napi-crypto/master.svg?label=windows&style=flat-square&maxAge=2592000)](https://ci.appveyor.com/project/simon-p-r/napi-crypto)
 [![Current Version](https://img.shields.io/npm/v/napi-crypto.svg?maxAge=1000)](https://www.npmjs.org/package/napi-crypto)
 [![dependency Status](https://img.shields.io/david/simon-p-r/napi-crypto.svg?maxAge=1000)](https://david-dm.org/simon-p-r/napi-crypto)

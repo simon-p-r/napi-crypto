@@ -1,6 +1,6 @@
 {
   "name": "napi-crypto",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "napi bindings for openssl crypto tools ",
   "main": "lib/index.js",
   "repository": {
