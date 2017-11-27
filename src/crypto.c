@@ -7,6 +7,15 @@
 
 #include "common.h"
 
+#ifdef _WIN32
+#ifndef CRYPTO_STRDUP
+#define CRYPTO_STRDUP(source) _strdup(source) 
+#endif
+#else
+#ifndef CRYPTO_STRDUP
+#define CRYPTO_STRDUP(source) strdup(source) 
+#endif
+#endif
 
 
 void *keypair_ctx_new() {
@@ -89,7 +98,7 @@ bool create_key_pair(void *ctx) {
     }
 
     rawLength = BIO_get_mem_data(bio, &private_key);
-    keypair->private_key = _strdup(private_key);
+    keypair->private_key = CRYPTO_STRDUP(private_key);
 
     /* Reallocate BIO */
     BIO_vfree(bio);
@@ -110,7 +119,7 @@ bool create_key_pair(void *ctx) {
     }
 
     rawLength = BIO_get_mem_data(bio, &public_key);
-    keypair->public_key = strdup(public_key);
+    keypair->public_key = CRYPTO_STRDUP(public_key);
     BIO_vfree(bio);
     return true;
 
