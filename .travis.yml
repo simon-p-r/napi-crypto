@@ -3,7 +3,6 @@ os:
 language: node_js
 node_js:
   - '8'
-  - '9'
 env:
   - CXX=g++-4.8
 install:
@@ -18,4 +17,7 @@ addons:
     - cmake
     - cmake-data
 script:
+  - npm install -g pre-cmake-js install
+  - npm install -g cmake-js install
+  - pre-cmake-js install --fallback-to-build -a x64
   - npm test
