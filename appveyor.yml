@@ -13,8 +13,8 @@ platform:
   - x86
   - x64
 
-cache:
-  - node_modules
+# cache:
+#   - node_modules
 
 install:
   - ps: Install-Product node $env:nodejs_version $env:platform
