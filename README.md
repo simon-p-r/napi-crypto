@@ -27,6 +27,19 @@ NapiCrypto.createKeyPair();
 // returns object with members privateKey and publicKey, there value is a string
 ```
 
+### NapiCrypto.createKeyPairAsync()
+
+Example
+
+```js
+
+const NapiCrypto = require('napi-crypto');
+
+NapiCrypto.createKeyPairAsync();
+
+// returns a promise resolving with either an error or object with members privateKey and publicKey, each value is a string
+```
+
 ### NapiCrypto.createCSR(options)
 
 certificate - buffer of certificate

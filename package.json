@@ -1,12 +1,19 @@
 {
   "name": "napi-crypto",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "napi bindings for openssl crypto tools ",
   "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/simon-p-r/napi-crypto.git"
+  },
   "scripts": {
-    "install": "cmake-js compile",
-    "rebuild": "cmake-js rebuild",
+    "build": "cmake-js build",
     "clean": "cmake-js clean",
+    "install": "pre-cmake-js install --fallback-to-build",
+    "package": "pre-cmake-js package",
+    "publish": "pre-cmake-js publish",
+    "rebuild": "cmake-js rebuild",
     "test": "lab -a code -v -t 100 -L -m 5000"
   },
   "keywords": [
@@ -14,15 +21,21 @@
     "openssl",
     "napi"
   ],
+  "binary": {
+    "module_name": "napi-crypto",
+    "module_path": "build/{platform}/{arch}/{configuration}",
+    "host": "https://github.com/simon-p-r/napi-crypto/releases/download/"
+  },
   "author": "simon-p-r",
   "license": "BSD-3-Clause",
   "dependencies": {
     "bindings": "^1.3.0",
-    "cmake-js": "^3.5.0"
+    "cmake-js": "^3.5.0",
+    "pre-cmake-js": "0.0.1"
   },
   "devDependencies": {
     "code": "^5.1.2",
-    "lab": "^14.3.1",
+    "lab": "^15.1.2",
     "node-addon-api": "^1.0.0"
   }
 }

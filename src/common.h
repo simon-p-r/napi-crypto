@@ -3,8 +3,8 @@
 libeay32.lib & ssleay.lib
 */
 
-#ifndef NODE_CRYPTO_H
-#define NODE_CRYPTO_H
+#ifndef NODE_CRYPTO_COMMON_H
+#define NODE_CRYPTO_COMMON_H
 
 #include <assert.h>
 #include <stdio.h>
@@ -80,5 +80,19 @@ libeay32.lib & ssleay.lib
   { (name), 0, 0, (func), 0, 0, napi_default, 0 }
 
 
+#ifndef COPY_STRING
+#define COPY_STRING(dest, source) strcpy(dest, source) 
+#endif
 
-#endif /* NODE_CRYPTO_H */
+
+struct crypto_keypair_ctx {
+    char *private_key;
+    char *public_key;
+    char error_msg[256];
+};
+
+void *keypair_ctx_new();
+void keypair_ctx_delete(void *ctx);
+bool create_key_pair(void *ctx);
+
+#endif /* NODE_CRYPTO_COMMON_H */
