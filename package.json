@@ -12,7 +12,7 @@
     "clean": "cmake-js clean",
     "install": "pre-cmake-js install --fallback-to-build",
     "package": "pre-cmake-js package",
-    "publish": "pre-cmake-js publish",
+    "publish-to-github": "pre-cmake-js publish",
     "rebuild": "cmake-js rebuild",
     "test": "lab -a code -v -t 100 -L -m 5000"
   },
@@ -31,7 +31,7 @@
   "dependencies": {
     "bindings": "^1.3.0",
     "cmake-js": "^3.5.0",
-    "pre-cmake-js": "0.0.1"
+    "pre-cmake-js": "0.0.2"
   },
   "devDependencies": {
     "code": "^5.1.2",
