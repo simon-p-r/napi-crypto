@@ -20,7 +20,6 @@ install:
   - ps: Install-Product node $env:nodejs_version $env:platform
   - npm -g install npm@latest
   - set PATH=%APPDATA%\npm;%PATH%
-  - npm install -a %PLATFORM%
   - echo %PLATFORM%
   
 matrix:
