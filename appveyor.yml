@@ -22,7 +22,7 @@ install:
   - set PATH=%APPDATA%\npm;%PATH%
   - npm install
   - cmd: npm install -g pre-cmake-js install
-  - pre-cmake-js install --fallback-to-build
+  - pre-cmake-js install --fallback-to-build -a %PLATFORM%
   - appveyor-retry call npm install
   
 matrix:
