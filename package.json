@@ -10,7 +10,7 @@
   "scripts": {
     "build": "cmake-js build",
     "clean": "cmake-js clean",
-    "install": "pre-cmake-js install --fallback-to-build",
+    "pre-install": "pre-cmake-js install --fallback-to-build",
     "package": "pre-cmake-js package",
     "publish-to-github": "pre-cmake-js publish",
     "rebuild": "cmake-js rebuild",
