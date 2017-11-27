@@ -21,6 +21,7 @@ install:
   - npm -g install npm@latest
   - set PATH=%APPDATA%\npm;%PATH%
   - npm install -a%PLATFORM%
+  - echo %PLATFORM%
   
 matrix:
   fast_finish: true
