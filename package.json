@@ -9,7 +9,6 @@
   },
   "scripts": {
     "build": "cmake-js build",
-    "build-exe": "pkg -t node8-x64-win ./test.js",
     "clean": "cmake-js clean",
     "package": "pre-cmake-js package",
     "postinstall": "npm run rebuild",
