@@ -9,14 +9,13 @@
 
 #ifdef _WIN32
 #ifndef CRYPTO_STRDUP
-#define CRYPTO_STRDUP(source) _strdup(source) 
+#define CRYPTO_STRDUP(source) _strdup(source)
 #endif
 #else
 #ifndef CRYPTO_STRDUP
-#define CRYPTO_STRDUP(source) strdup(source) 
+#define CRYPTO_STRDUP(source) strdup(source)
 #endif
 #endif
-
 
 void *keypair_ctx_new() {
     
